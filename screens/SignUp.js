@@ -19,7 +19,7 @@ export default class SignUp extends Component {
         const { form } = this.refs;
         const newUser = form.getValue();
         if (!newUser) return;
-        console.log(newUser);
+        this.clearForm()
     }
 
     render() {
