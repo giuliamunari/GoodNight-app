@@ -4,7 +4,7 @@ import SignUp from './screens/SignUp';
 
 import store from './store'
 import { Provider } from 'react-redux'
-
+import { Router, Scene } from 'react-native-router-flux';
 import { BrowserRouter } from 'react-router-dom'
 
 export default class App extends React.Component {
@@ -13,7 +13,11 @@ export default class App extends React.Component {
       <BrowserRouter>
         <Provider store={store}>
           <View style={styles.container}>
-            <SignUp />
+            <Router>
+              <Scene key="root">
+                <Scene key="signUp" component={SignUp} title="Sign Up" initial={true} />
+              </Scene>
+            </Router>
           </View>
         </Provider>
       </BrowserRouter>
