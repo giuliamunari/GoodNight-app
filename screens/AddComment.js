@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
 import { View, Text, TouchableHighlight, KeyboardAvoidingView } from 'react-native';
 import t from 'tcomb-form-native';
-import Message, { formOptions } from '../models/Message';
+import Comment, { formOptions } from '../models/Comment';
 import styles from './Components.styles';
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
 
-class AddJournal extends Component {
-    state = { newMessage: null }
+class AddComment extends Component {
+    state = { newComment: null }
 
     componentDidMount() {
-        this.refs.form.getComponent('message').refs.input.focus();
+        this.refs.form.getComponent('comment').refs.input.focus();
     }
 
-    clearForm = () => this.setState({ newMessage: null });
+    clearForm = () => this.setState({ newComment: null });
 
-    onChange = (newMessage) => this.setState({ newMessage });
+    onChange = (newComment) => this.setState({ newComment });
 
     onSubmit = () => {
         const { form } = this.refs;
-        const newMessage = form.getValue();
-        if (!newMessage) return;
+        const newComment = form.getValue();
+        if (!newComment) return;
         this.clearForm()
-        Actions.addComment()
+        Actions.lounchSession()
         
     }
 
@@ -34,11 +34,12 @@ class AddJournal extends Component {
                     behavior="padding"
                     style={styles.container}>
                     <Text style={styles.title}>welcome</Text>
+                    <Text>Lorem ipsum</Text>
                     <Form
                         ref="form"
-                        type={Message}
+                        type={Comment}
                         options={formOptions}
-                        value={this.state.newMessage}
+                        value={this.state.newComment}
                         onChange={this.onChange} />
                     <TouchableHighlight
                         style={styles.button}
@@ -57,4 +58,4 @@ function mapStateToProps(state) {
         //message: state.message.message
     }
 }
-export default connect(mapStateToProps)(AddJournal)
+export default connect(mapStateToProps)(AddComment)
