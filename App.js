@@ -19,7 +19,7 @@ export default class App extends React.Component {
                         <Scene key="addComment" component={AddComment} title="Step 2" />
                         <Scene key="lounchSession" component={LounchSession} title="Start" />
                         <Scene key="chromoTherapy" component={ChromoTherapy} title="Good night" />
-                        <Scene key="journal" component={Journal} title="Journal" />
+                        <Scene key="journal" component={Journal} title="Journal"  />
                     </Scene>
                 </Router>
             </Provider>
