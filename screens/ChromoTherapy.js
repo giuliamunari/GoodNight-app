@@ -56,7 +56,7 @@ class ChromoTherapy extends Component {
                         onPress={Actions.lounchSession}
                         underlayColor='#99d9f4'
                     >
-                        <Text style={styles.buttonText}>Stop</Text>
+                        <Text style={styles.buttonText}>Go back</Text>
                     </TouchableHighlight>
             </Animatable.View>
         );
