@@ -9,9 +9,7 @@ export default StyleSheet.create({
         justifyContent: 'center',
         paddingHorizontal: 20,
         paddingTop: 20,
-       // backgroundColor:'pink'
     },
-    
     buttonText: {
         fontSize: 18,
         color: 'white',
