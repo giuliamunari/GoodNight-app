@@ -30,4 +30,9 @@ export default StyleSheet.create({
         alignSelf: 'stretch',
         justifyContent: 'center'
     },
+
+    slide: { alignItems: 'center', flex: 1 },
+    title: { color: '#fff', fontSize: 20 }
+
+
 });

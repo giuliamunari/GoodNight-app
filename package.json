@@ -12,21 +12,24 @@
     "expo-av": "^6.0.0",
     "faker": "^4.1.0",
     "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
     "react": "16.8.3",
     "react-dom": "^16.8.6",
     "react-native": "https://github.com/expo/react-native/archive/sdk-34.0.0.tar.gz",
     "react-native-animatable": "^1.3.2",
+    "react-native-animated-swiper": "0.0.23",
     "react-native-router-flux": "^4.0.6",
     "react-native-web": "^0.11.4",
     "react-redux": "^7.1.0",
     "react-router-dom": "^5.0.1",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
-    "remote-redux-devtools": "^0.5.16",
+    "superagent": "^5.1.0",
     "tcomb-form-native": "^0.6.20"
   },
   "devDependencies": {
-    "babel-preset-expo": "^6.0.0"
+    "babel-preset-expo": "^6.0.0",
+    "remote-redux-devtools": "^0.5.16"
   },
   "private": true
 }

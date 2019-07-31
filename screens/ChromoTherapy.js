@@ -49,7 +49,6 @@ class ChromoTherapy extends Component {
     render() {
         return (
             <Animatable.View animation={this.animation} easing="ease-in-out" iterationCount={Infinity} direction="alternate" duration={50000} style={styles.container}>
-                
                 <AudioPlayer></AudioPlayer>
                 <TouchableHighlight
                         style={styles.button}

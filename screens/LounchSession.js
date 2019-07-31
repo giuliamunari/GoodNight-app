@@ -24,7 +24,7 @@ class LounchSession extends Component {
                 </TouchableHighlight>
                 <TouchableHighlight
                     style={styles.button}
-                    //onPress={this.onSubmit}
+                    onPress={Actions.journal}
                     underlayColor='#99d9f4'
                 >
                     <Text style={styles.buttonText}>Check your journal</Text>

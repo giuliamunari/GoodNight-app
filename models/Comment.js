@@ -1,6 +1,6 @@
 import t from 'tcomb-form-native';
 
-const Message = t.struct({
+const Comment = t.struct({
     comment: t.String,
 });
 
@@ -8,9 +8,9 @@ export const formOptions = {
     auto: 'placeholders',
     fields: {
         comment: {
-          placeholder: 'Your placeholder here',
+          placeholder: 'Say something you are grateful for',
         }
       }
 }
 
-export default Message;
+export default Comment;
