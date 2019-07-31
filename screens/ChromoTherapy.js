@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { View, Text, TouchableHighlight, Animated, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, TouchableHighlight } from 'react-native';
+import * as Music from '../assets/music/rain.mp3' 
 import * as Animatable from 'react-native-animatable';
 import styles from './ChromoTherapy.styles';
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
-import Background from './4.png';
+import { Audio } from 'expo-av';
+import AudioPlayer from './AudioPlayer'
 class ChromoTherapy extends Component {
     animation = {
         0: {
@@ -41,13 +43,14 @@ class ChromoTherapy extends Component {
             backgroundColor: `#00d2d3`
         },
     }
-
     componentDidMount() {
     }
     
     render() {
         return (
             <Animatable.View animation={this.animation} easing="ease-in-out" iterationCount={Infinity} direction="alternate" duration={50000} style={styles.container}>
+                
+                <AudioPlayer></AudioPlayer>
                 <TouchableHighlight
                         style={styles.button}
                         onPress={Actions.lounchSession}
@@ -59,7 +62,6 @@ class ChromoTherapy extends Component {
         );
     }
 }
-
 
 function mapStateToProps(state) {
     return {

@@ -2,6 +2,7 @@ node_modules/**/*
 .expo/*
 npm-debug.*
 *.jks
+*.mp3
 *.p8
 *.p12
 *.key
