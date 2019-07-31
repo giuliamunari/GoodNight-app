@@ -5,6 +5,7 @@ import Message, { formOptions } from '../models/Message';
 import styles from './Components.styles';
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
+import { addMessage } from '../actions/message'
 
 class AddJournal extends Component {
     state = { newMessage: null }
@@ -21,9 +22,9 @@ class AddJournal extends Component {
         const { form } = this.refs;
         const newMessage = form.getValue();
         if (!newMessage) return;
+        this.props.addMessage(newMessage)
         this.clearForm()
         Actions.addComment()
-        
     }
 
     render() {
@@ -54,7 +55,7 @@ class AddJournal extends Component {
 }
 function mapStateToProps(state) {
     return {
-        //message: state.message.message
+        state
     }
 }
-export default connect(mapStateToProps)(AddJournal)
+export default connect(null, {addMessage})(AddJournal)

@@ -5,6 +5,7 @@ import Comment, { formOptions } from '../models/Comment';
 import styles from './Components.styles';
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
+import { sendMessage } from '../actions/message'
 
 class AddComment extends Component {
     state = { newComment: null }
@@ -22,8 +23,8 @@ class AddComment extends Component {
         const newComment = form.getValue();
         if (!newComment) return;
         this.clearForm()
-        Actions.lounchSession()
-        
+        this.props.sendMessage(newComment, this.props.message)
+        //Actions.lounchSession()
     }
 
     render() {
@@ -55,7 +56,7 @@ class AddComment extends Component {
 }
 function mapStateToProps(state) {
     return {
-        //message: state.message.message
+        message: state.messages.message
     }
 }
-export default connect(mapStateToProps)(AddComment)
+export default connect(mapStateToProps, {sendMessage})(AddComment)
