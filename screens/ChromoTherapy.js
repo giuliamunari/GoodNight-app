@@ -28,8 +28,8 @@ class ChromoTherapy extends Component {
                     // Interpolation mapping from numbers to strings (colors)
                     {
                         backgroundColor: this.state.backgroundColor.interpolate({
-                            inputRange: [0, 100],
-                            outputRange: ["#00aaFF", "#808080"]
+                            inputRange: [0, 100, 200, 300],
+                            outputRange: ['#ff9f43', '#1dd1a1', '#54a0ff', '#5f27cd']
                         })
                     }
                 ]}
