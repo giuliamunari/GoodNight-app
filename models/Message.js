@@ -7,7 +7,6 @@ const stylesheet = _.cloneDeep(t.form.Form.stylesheet);
 stylesheet.textbox.normal.color = '#fff';
 
 stylesheet.textbox.normal.borderColor = '#fff';
-stylesheet.textbox.normal.borderBottomColor = 'red'
 
 
 const Message = t.struct({
