@@ -3,36 +3,51 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
     outerContainer: {
         flex: 1,
+        color: 'white',
+        justifyContent: 'center',
+        padding:20,
+        textAlign:'center',
     },
     container: {
         flex: 1,
         justifyContent: 'center',
-        paddingHorizontal: 20,
-        paddingTop: 20,
+        textAlign:'center',
+        alignContent:'center',
+        textAlign:'center',
     },
     title: {
-        fontSize: 30,
+        fontSize: 16,
         alignSelf: 'center',
-        marginBottom: 30
+        paddingBottom:30,
+        textAlign:'center',
+        color: 'white'
     },
     buttonText: {
         fontSize: 18,
-        color: 'white',
+        color: '#48BBEC',
         alignSelf: 'center'
     },
     button: {
         height: 36,
-        backgroundColor: '#48BBEC',
-        borderColor: '#48BBEC',
+        backgroundColor: 'white',
+        borderColor: 'white',
         borderWidth: 1,
         borderRadius: 8,
-        marginBottom: 10,
+        marginTop: 20,
+        paddingTop:20,
+        paddingBottom:20,
         alignSelf: 'stretch',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        marginRight:30,
+        marginLeft:30
     },
+    logo : {
+        alignSelf: 'center',
+        marginBottom: 30,
 
-    slide: { alignItems: 'center', flex: 1 },
-    title: { color: '#fff', fontSize: 20 }
+    },
+    slide: { alignItems: 'center', flex: 1, 
+    textAlign:'center', }
 
 
 });

@@ -6,6 +6,8 @@ import styles from './Components.styles';
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
 import { sendMessage } from '../actions/message'
+import Logo from './Logo'
+import { LinearGradient } from 'expo-linear-gradient';
 
 class AddComment extends Component {
     state = { newComment: null }
@@ -24,18 +26,25 @@ class AddComment extends Component {
         if (!newComment) return;
         this.clearForm()
         this.props.sendMessage(newComment, this.props.message)
-        //Actions.lounchSession()
+        Actions.lounchSession()
     }
 
     render() {
         const Form = t.form.Form;
         return (
+           
             <View style={styles.container}>
+
+<LinearGradient
+          colors={['#575FCF', '#0FBCF9']}
+          style={{ padding: 15, alignItems: 'center', width: '100%', height: '100%', flex: 1 }}>
                 <KeyboardAvoidingView
                     behavior="padding"
                     style={styles.container}>
-                    <Text style={styles.title}>welcome</Text>
-                    <Text>Lorem ipsum</Text>
+                        <Logo></Logo>
+                    <Text style={styles.title}>Now write something you are grateful about
+It can be anything.</Text>
+<Text style={styles.title}> </Text>
                     <Form
                         ref="form"
                         type={Comment}
@@ -49,7 +58,10 @@ class AddComment extends Component {
                     >
                         <Text style={styles.buttonText}>Add your thoughts</Text>
                     </TouchableHighlight>
+
+                    
                 </KeyboardAvoidingView>
+                </LinearGradient>
             </View>
         );
     }

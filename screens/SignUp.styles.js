@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
     outerContainer: {
         flex: 1,
+        color: 'white'
     },
     container: {
         flex: 1,

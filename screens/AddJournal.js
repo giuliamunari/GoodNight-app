@@ -6,6 +6,9 @@ import styles from './Components.styles';
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
 import { addMessage } from '../actions/message'
+import Logo from './Logo'
+
+import { LinearGradient } from 'expo-linear-gradient';
 
 class AddJournal extends Component {
     state = { newMessage: null }
@@ -30,12 +33,17 @@ class AddJournal extends Component {
     render() {
         const Form = t.form.Form;
         return (
+           
             <View style={styles.container}>
+                 <LinearGradient
+          colors={['#575FCF', '#0FBCF9']}
+          style={{ padding: 15, alignItems: 'center', width: '100%', height: '100%', flex: 1 }}>
                 <KeyboardAvoidingView
                     behavior="padding"
                     style={styles.container}>
-                    <Text style={styles.title}>welcome</Text>
+                        <Logo></Logo>
                     <Form
+                        style={{ color:'white' }}
                         ref="form"
                         type={Message}
                         options={formOptions}
@@ -49,13 +57,11 @@ class AddJournal extends Component {
                         <Text style={styles.buttonText}>Add your thoughts</Text>
                     </TouchableHighlight>
                 </KeyboardAvoidingView>
+                </LinearGradient>
             </View>
+            
         );
     }
 }
-function mapStateToProps(state) {
-    return {
-        state
-    }
-}
+
 export default connect(null, {addMessage})(AddJournal)
