@@ -12,16 +12,18 @@ export default StyleSheet.create({
     },
     buttonText: {
         fontSize: 18,
-        color: 'white',
+        color: '#ffffff',
         alignSelf: 'center'
     },
     button: {
         height: 36,
-        backgroundColor: '#48BBEC',
-        borderColor: '#48BBEC',
+        backgroundColor: 'transparent',
+        borderColor: 'white',
         borderWidth: 1,
         borderRadius: 8,
-        marginBottom: 10,
+        marginTop: 20,
+        paddingTop:20,
+        paddingBottom:20,
         alignSelf: 'stretch',
         justifyContent: 'center'
     },
